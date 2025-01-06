@@ -22,9 +22,16 @@ const LoginPage: React.FC = () => {
                 setAuthToken(response.data.token,response.data.user.role);
                 router.push('/');
             }
-        } catch (err: any) {
-            setError(err.response.data.message);
-            console.error("error in login: ", err);
+        } catch (err: unknown) {
+            if (axios.isAxiosError(err)) {
+                // Handle Axios-specific error
+                setError(err.response?.data?.message || "An error occurred");
+                console.error("Axios error in login: ", err);
+            } else {
+                // Handle non-Axios errors (if any)
+                setError("Unexpected error occurred");
+                console.error("Unexpected error in login: ", err);
+            }
         }
     };
 

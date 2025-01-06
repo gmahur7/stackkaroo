@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
-const ChooseSectionCard = ({ imageUrl, text }: { text: string, imageUrl: any }) => {
+interface ChooseSectionCardProps {
+    text: string;
+    imageUrl: ReactElement;
+  }
+
+const ChooseSectionCard: React.FC<ChooseSectionCardProps> = ({ imageUrl, text }) => {
     return (
         <div className='flex gap-2 items-center border-2 border-white px-4 py-4 rounded-3xl shadow-lg shadow-[#0e55f060] w-full sm:max-w-xs md:max-w-md lg:max-w-[220px]'>
             <div className='bg-white p-2 rounded-md'>

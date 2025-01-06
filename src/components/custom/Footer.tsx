@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Separator } from "@/components/ui/separator";
 import Logo from '../../asssets/images/logo-dark.svg'
 import Certificate from '../../asssets/images/certificate.png'
 

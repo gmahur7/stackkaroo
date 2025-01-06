@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { User, Languages, Brain, Monitor } from "lucide-react";
 import Image from 'next/image';
 import Computer from '../../asssets/images/computer_9330495 1.png'
 import List from '../../asssets/images/list_8532959 1.png'
