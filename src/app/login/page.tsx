@@ -9,11 +9,11 @@ const LoginPage: React.FC = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const router = useRouter();
-
+    
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:6002/api/v1/user/login', {
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/login`, {
                 username,
                 password,
             });

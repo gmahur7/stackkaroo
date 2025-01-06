@@ -8,7 +8,7 @@ const HeadingSection = () => {
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-center text-gray-900 mt-8 sm:mt-16 md:mt-24">
         Whether you&apos;re seeking top talent, your dream job, or <br />exceptional web services, Stackkaroo has got you covered. <br />Explore our offerings and find what you need to achieve <br />your goals.
       </h1>
-      <div className="flex justify-center items-center mt-12 z-40">
+      <div className="flex justify-center items-center mt-12 z-0">
         <Avatar className="shadow-lg z-10">
           <AvatarImage src="https://www.stackkaroo.com/_next/image?url=%2Fassets%2Fportfolio%2Fidelogo.webp&w=256&q=75" />
         </Avatar>

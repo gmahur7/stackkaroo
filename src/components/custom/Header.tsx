@@ -72,12 +72,12 @@ const Header = () => {
                     <LuMenu size={25} onClick={() => setIsMenuOpen(true)} className="cursor-pointer" />
                 </div>
             </div>
-            <div className='z-40'>
+            <div className='z-50'>
                 {
                     isMenuOpen ? (
-                        <div className=''>
-                            <div className="fixed inset-0 bg-black bg-opacity-50 " onClick={() => setIsMenuOpen(false)}></div>
-                            <div className="fixed top-0 left-0 h-full w-full bg-white shadow-lg">
+                        <div className='z-50'>
+                            <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => setIsMenuOpen(false)}></div>
+                            <div className="fixed top-0 left-0 h-full w-full bg-white shadow-lg z-50">
                                 <div className="flex justify-between py-4 px-2 md:px-[6.9rem]">
                                 <Image src="https://www.stackkaroo.com/img/general/logo-dark.svg" height={50} width={101} alt="logo" />
                                     <button onClick={() => setIsMenuOpen(false)}>
