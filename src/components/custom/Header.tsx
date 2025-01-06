@@ -7,6 +7,7 @@ import { LuMenu, LuX } from "react-icons/lu";
 import gsap from 'gsap';
 import { removeAuthToken } from '@/utils/auth';
 import Cookies from 'js-cookie';
+import axios from 'axios';
 
 const routes = {
     home: '/',
@@ -51,10 +52,23 @@ const Header = () => {
         };
       }, []);
 
+    const resetLimit = async () => {
+        try {
+            const response = await axios.put(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/reset/login`,{});
+
+            if (!response.data.success) {
+                throw new Error('Failed to reset limit');
+            }
+            alert('Limit reset successfully');
+        } catch (error) {
+            console.error('Error resetting limit:', error);
+        }
+    };
+
     return (
         <>
             <div className={`.header-container flex justify-between items-center  transition-transform duration-1000 ease-in-out ${isFixed ? "fixed top-0 left-0 w-full bg-white px-24 shadow-lg py-2" : "py-4"}`}>
-                <div>
+                <div onClick={resetLimit} className='cursor-pointer'>
                     <Image src="https://www.stackkaroo.com/img/general/logo-dark.svg" height={50} width={101} alt="logo" />
                 </div>
                 <div className='hidden lg:flex gap-4 mx-4'>
