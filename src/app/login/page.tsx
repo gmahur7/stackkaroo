@@ -17,8 +17,9 @@ const LoginPage: React.FC = () => {
                 username,
                 password,
             });
-            console.log(response.data.user.role);
+            // console.log(response.data.user.role);
             if (response.data.success) {
+                alert('Login successful and you are logged in as ' + response.data.user.role);
                 setAuthToken(response.data.token,response.data.user.role);
                 router.push('/');
             }
