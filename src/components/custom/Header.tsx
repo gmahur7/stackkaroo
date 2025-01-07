@@ -67,7 +67,7 @@ const Header = () => {
 
     return (
         <>
-            <div className={`.header-container flex justify-between items-center  transition-transform duration-1000 ease-in-out ${isFixed ? "fixed top-0 left-0 w-full bg-white px-24 shadow-lg py-2" : "py-4"}`}>
+            <div className={`.header-container flex justify-between items-center  transition-transform duration-1000 ease-in-out ${isFixed ? "fixed top-0 left-0 w-full bg-white px-24 shadow-lg py-2 z-50" : "py-4"}`}>
                 <div onClick={resetLimit} className='cursor-pointer'>
                     <Image src="https://www.stackkaroo.com/img/general/logo-dark.svg" height={50} width={101} alt="logo" />
                 </div>
