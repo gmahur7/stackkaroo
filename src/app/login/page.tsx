@@ -8,9 +8,11 @@ const LoginPage: React.FC = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState<boolean>(false);
     const router = useRouter();
     
     const handleLogin = async (e: React.FormEvent) => {
+        setLoading(true)
         e.preventDefault();
         try {
             const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/user/login`, {
@@ -33,6 +35,8 @@ const LoginPage: React.FC = () => {
                 setError("Unexpected error occurred");
                 console.error("Unexpected error in login: ", err);
             }
+        }finally{
+            setLoading(false)
         }
     };
 
@@ -75,7 +79,7 @@ const LoginPage: React.FC = () => {
                             type="submit"
                             className="w-full px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
-                            Login
+                           { !loading?"Login":"Processing"}
                         </button>
                     </div>
                 </form>
