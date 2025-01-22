@@ -30,7 +30,7 @@ const data = [
 
 const PricingSection = () => {
   return (
-    <div className='text-center mt-16'>
+    <div className='text-center my-16'>
     <h4 className='text-2xl sm:text-3xl lg:text-4xl text-[#e68f51] font-bold'>We are Best Because</h4>
     <p className='mt-6 text-lg sm:text-xl lg:text-2xl font-bold'>Affordable Web Development Company in India</p>
     <div className='mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8'>
