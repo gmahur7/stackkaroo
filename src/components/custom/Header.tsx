@@ -90,7 +90,7 @@ const Header = () => {
                                     <button className={`${pathname === routes.more && "border-b-2 border-[#f78218]"} text-[15px] font-custom cursor-pointer px-2`} onClick={() => navigate('/job#')}>More About</button>
                                 </div>
                                 <div className="flex justify-center p-4">
-                                <Button className='rounded-full text-md bg-[#f78218] px-7 py-4 border-2 border-white'>{token?'Logout':'Login'}</Button>
+                                <Button className='rounded-full text-md bg-[#f78218] px-7 py-4 border-2 border-white'>Login</Button>
                                 </div>
                             </div>
                         </div>
